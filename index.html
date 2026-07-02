@@ -1,1 +1,228 @@
-i love you
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Moharani ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+overflow:hidden;
+background:linear-gradient(-45deg,#ff4d6d,#ff758f,#8e44ad,#6c5ce7,#00c9ff,#00f5d4);
+background-size:500% 500%;
+animation:bg 15s ease infinite;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+
+width:90%;
+max-width:850px;
+padding:50px;
+border-radius:30px;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+box-shadow:0 0 40px rgba(255,255,255,.35);
+text-align:center;
+position:relative;
+z-index:5;
+
+}
+
+h1{
+
+font-size:60px;
+color:white;
+text-shadow:0 0 10px #fff,
+0 0 20px #ff66c4,
+0 0 40px #ff66c4;
+white-space:nowrap;
+overflow:hidden;
+border-right:4px solid white;
+width:0;
+animation:typing 5s steps(29,end) forwards,
+blink .7s infinite;
+
+}
+
+@keyframes typing{
+
+from{width:0;}
+to{width:100%;}
+
+}
+
+@keyframes blink{
+
+50%{border-color:transparent;}
+
+}
+
+p{
+
+margin-top:30px;
+font-size:26px;
+color:white;
+animation:fade 6s infinite;
+
+}
+
+@keyframes fade{
+
+0%,100%{opacity:1;}
+50%{opacity:.5;}
+
+}
+
+.heart{
+
+font-size:90px;
+margin-top:20px;
+animation:beat 1s infinite;
+filter:drop-shadow(0 0 20px red);
+
+}
+
+@keyframes beat{
+
+0%,100%{transform:scale(1);}
+50%{transform:scale(1.25);}
+
+}
+
+.hearts span{
+
+position:absolute;
+font-size:20px;
+animation:float linear infinite;
+opacity:.8;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(110vh) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) scale(1.8);
+opacity:0;
+}
+
+}
+
+.spark{
+
+position:absolute;
+width:6px;
+height:6px;
+background:white;
+border-radius:50%;
+animation:spark 4s linear infinite;
+
+}
+
+@keyframes spark{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh);
+opacity:0;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="hearts"></div>
+<div class="sparks"></div>
+
+<div class="card">
+
+<h1>I Love You So Much Moharani ❤️</h1>
+
+<p>You Are My Happiness, My Smile, My Everything 💕</p>
+
+<div class="heart">💖</div>
+
+</div>
+
+<script>
+
+const hearts=document.querySelector(".hearts");
+
+for(let i=0;i<70;i++){
+
+let h=document.createElement("span");
+
+h.innerHTML=["❤️","💖","💕","💗","💓"][Math.floor(Math.random()*5)];
+
+h.style.left=Math.random()*100+"%";
+
+h.style.animationDuration=(5+Math.random()*8)+"s";
+
+h.style.animationDelay=Math.random()*5+"s";
+
+h.style.fontSize=(18+Math.random()*35)+"px";
+
+hearts.appendChild(h);
+
+}
+
+const body=document.body;
+
+for(let i=0;i<120;i++){
+
+let s=document.createElement("div");
+
+s.className="spark";
+
+s.style.left=Math.random()*100+"%";
+
+s.style.animationDuration=(3+Math.random()*4)+"s";
+
+s.style.animationDelay=Math.random()*5+"s";
+
+body.appendChild(s);
+
+}
+
+</script>
+
+</body>
+</html>
